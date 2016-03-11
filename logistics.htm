@@ -1,0 +1,139 @@
+﻿<!Doctype html>
+<html lang="en">
+    <head>
+        <title>Logistics</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial scale=1" />
+        <link href="normalize.css" rel="stylesheet" />
+        <script src="jquery-1.11.3.js"></script>
+
+        <!-- BootStrap -->
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <!-- Smoothscroll -->
+        <script src="smooth-scroll.js"></script>
+
+        <!-- Custom CSS -->
+        <link href="navbar.css" rel="stylesheet"/>
+        <link href="logistics.css" rel="stylesheet" />
+
+        <!-- Google Map -->
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <script>
+            //Add site's lat/lng to the routes
+            var googleMapRoute = new Array();
+            //googleMapRoute[0] = "400 24th Ave S Nashville TN 37212";
+            function initialize() {
+                var latLng = new google.maps.LatLng(36.144801, -86.803281);
+                var mapOptions = {
+                    center: latLng,
+                    zoom: 17,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+
+                var infoWindow = new google.maps.InfoWindow({
+                    content: "Featheringill Hall, 400 24th Avenue South, Nashville, TN 37212"
+                })
+
+                //Creating a marker and positioning it on the map
+                var marker = new google.maps.Marker({
+                    position: latLng,
+                    map: map,
+                    title: "Featheringill Hall",
+                    clickable: true
+                });
+
+                google.maps.event.addListener(marker, "click", function () {
+                    infoWindow.open(map, marker);
+                });
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+           <ul class="nav navbar-nav">
+            <li><a href="index.htm">Home</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">Register<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Register.htm">Pick a Tournament</a></li>
+                    <li><a href="https://docs.google.com/forms/d/1G6QaijU56woFdjEDRJbs1lCf6QuzrqRJQAQTZSYjn1I/viewform" target="_blank">Volunteer</a></li>
+                    <li><a href="https://docs.google.com/forms/d/1e4DIYPghofnaa1pNcdJa45hW0RWJDUEUcKtednPor9o/viewform" target="_blank">Lend Consoles</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle active" data-toggle="dropdown">Info<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="logistics.htm">Logistics</a></li>
+                    <li><a href="FAQ.htm">FAQ's</a></li>
+                    <li><a href="about.htm">About Us</a></li>
+                </ul>            
+            </li>
+
+                <li><a href="https://www.facebook.com/events/760506580745655/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="http://vanderbilt.edu" target="_blank"><i class="fa fa-globe"></i></a></li>
+                <li><a href="mailto:vandylanboard@gmail.com? Subject=Question%20for%20Vandy_LAN"><i class="fa fa-envelope"></i></a></li>
+
+        </ul>
+       </nav>
+        <div class="jumbotron">
+            <div class="container text-center">
+                <h1 class="banner-inverted"><font color="white">Logistics</font></h1>
+            </div>
+        </div>
+        <h1 class="text-center">Fees</h1><hr />
+        <div class="container">
+            <table class="table table-striped" style="border-spacing: 10px">
+            <tr>
+                <th>Expense</th>
+                <th>Cost</th>
+            </tr>
+            <tr>
+                <td>Vanderbilt students: </td>
+                <td>FREE!</td>
+            </tr>
+            <tr>
+                <td>Vandy Alumni and MOSAIC students: </td>
+                <td>FREE!</td>
+            </tr>
+            <tr>
+                <td>Non-Vanderbilt attendees: </td>
+                <td>$10</td>
+            </tr>
+            <tr>
+                <td>Dinner (Pizza): </td>
+                <td>Included with Admission!</td>
+            </tr>
+            </table>
+        </div>
+        
+        <h1 class="text-center">Payment</h1><hr />
+        <p style="padding-left: 80px; padding-right: 10px">Vanderbilt students must either show their Commodore Cards, or provide a Vandy email (alumni) in order to be admitted.<br /> Non-Vanderbilt students must pay the $10 entrance fee <b>in cash</b> at the entrance of Featheringill Hall. Our volunteers will work to make the process as convenient as possible</p>
+
+        <h1 class="text-center">Tournament Layout</h1><hr />
+        <p style="padding-left: 80px; padding-right: 10px">Below is the location of each tournament within the Featheringill building. All tournaments are located on the 1st floor.</p>
+        <div class="text-center">
+            <img src="Spring2016FloorPlan.png" style="height: 400px; width: 600px" />
+        </div>
+
+        <h1 class="text-center">Location</h1><hr />
+        <p style="padding-left: 80px; padding-right: 10px">Vandy_LAN 2016 is held in the atrium and auditorium of <b>Featheringill Hall</b>, one of three buildings dedicated to Vanderbilt's School of Engineering. A map of the building is shown below.</p>
+        <div id="googleMap" style="width: 500px; height: 380px; margin: 0 auto; margin-bottom: 20px"></div>
+
+        <footer style="background: black">
+            <div class="container" style="color: white; padding: 10px">
+                <p class="pull-right">Website Managed by Yifan Guo</p>
+                <p class="pull-left">&copy; 2015 Vandy_LAN</p>
+            </div>
+        </footer>
+
+        <script>
+            smoothScroll.init();
+        </script>
+    </body>
+</html>

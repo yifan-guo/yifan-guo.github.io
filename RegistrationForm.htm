@@ -1,0 +1,116 @@
+<!doctype html>
+<head>
+    <title>Registration Form</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial scale=1" />
+        <link href="normalize.css" rel="stylesheet" />
+        <script src="jquery-1.11.3.js"></script>
+
+        <!-- BootStrap -->
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <!-- Smoothscroll -->
+        <script src="smooth-scroll.js"></script>
+
+    <style>
+        header {
+        text-align: center;
+        }
+        .contents {
+        margin: 0 0 0 50px;
+        }
+        h1 {
+        text-align: center;
+        color: black;
+        }
+        .checkbox {
+        padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="text-center"><img src="Logo.jpg" style="height:200px; width: 200px; border-radious: 100%" /></div>
+            <h1 class="text-center">Tournament Registration</h1><hr />
+
+            <span>First Name:</span>
+            <input type="text" id="FirstName" class="form-control" placeholder="First Name" required/>
+            <span>Last Name:</span>
+            <input type="text" id="LastName" class="form-control" placeholder="Last Name" required/>
+            <span>Phone Number:</span>  
+            <input type="text" id="PhoneNumber" class="form-control" placeholder="615-999-9999" data-mask="_________" required>
+            <span>School:</span>
+            <input type="text" id="School" class="form-control" placeholder="School you attend" required/>
+            <span>Which tournament are you registering in?</span>
+            <select id="Tournament" class="form-control">
+                <option id="vandylan_dota_2" value="vandylan_dota_2">DOTA 2</option>
+                <option id="vandylan2016smash4" value="vandylan2016smash4">Super Smash Bros. for Wii U</option>
+                <option id="vandylan_fifa_2016" value="vandylan_fifa_2016">FIFA 2016</option>
+                <option id="vandylan_street_fighter_v" value="vandylan_street_fighter_v">Street Fighter V</option>
+                <option id="vandylan_cod_mw2" value="vandylan_cod_mw2">Call of Duty: Modern Warfare 2</option>
+                <option id="vandylan_hearthstone" value="vandylan_hearthstone">Hearthstone</option>
+                <option id="vandylan_melee" value="vandylan_melee">Super Smash Bros. Melee</option>
+                <option id="vandylan_rocket_league" value="vandylan_rocket_league">Rocket League</option>
+            </select><br />
+
+            <div class="checkbox">
+                <input type="checkbox" />
+                <small>Please check if this is the first time you're attending Vandy_LAN.</small>
+            </div>
+
+            <button class="btn btn-large btn-primary btn-group" onclick="loadDoc()">Submit</button> 
+
+    </div>
+
+    
+    <script>
+        //pre-selects the item in the Tournament dropdown
+        //$(document).ready(defaultInitialize);
+
+        function defaultInitialize() {
+            var url = window.location.toString();
+            var tournament = delineate(url);
+            var att = document.createAttribute('selected');
+            document.getElementById(tournament).setAttributeNode(att);
+        }
+        function delineate(str) {
+            var n = str.indexOf('=') + 1;
+            return (str.substring(n));
+        }
+        window.onload = defaultInitialize;
+    </script>
+    
+
+    
+    <script>
+        function loadDoc() {
+        //grabs user info from the form
+        var full_name = document.getElementById("FirstName").value + ' ' + document.getElementById("LastName").value;
+        var tournament = document.getElementById("Tournament").value;
+        var data = "api_key=gz1uth33dFu2KHBbRJ87jF7BpyuZnQSgTHZW1mQj&participant[name]=" + full_name;
+        var xhttp = new XMLHttpRequest();
+        var string = "https://vandy_lan:gz1uth33dFu2KHBbRJ87jF7BpyuZnQSgTHZW1mQj@api.challonge.com/v1/tournaments/" + tournament + "/participants.json";
+
+    
+        //redirects to the registration success page
+        function redirect(data) {
+            window.location = "registration_success.htm?q=" + tournament;
+        }
+
+        //inserts the user information into the appropriate Challonge bracket and redirects
+        $.ajax({
+            type: "POST",
+            url: string,
+            data: data,
+            success: redirect,
+            error: redirect
+        });
+    }
+    </script>
+    <script>
+            smoothScroll.init();
+    </script>
+</body>

@@ -1,0 +1,43 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial scale=1" />
+        <link href="normalize.css" rel="stylesheet" />
+        <script src="jquery-1.11.3.js"></script>
+
+        <!-- BootStrap -->
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <!-- Smoothscroll -->
+        <script src="smooth-scroll.js"></script>
+
+        <!-- Custom CSS -->
+        <link href="login.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="text-center"><img src="Logo.jpg" style="height:200px; width: 200px; border-radious: 100%" /></div>
+            <h1 class="text-center">Register</h1>
+                <hr />
+            <form name="createForm" action="http://localhost/createaccount.php" method="post" class="form-signin" role="form">
+                <span>First Name: </span><br />
+                <input name="firstname" id="firstname" type="text" class="form-control" value="" required />
+                <span>Last Name: </span><br />
+                <input name="lastname" id="lastname" type="text" class="form-control" value="" required>
+                <span>Email: </span><br />
+                <input name="myusername" id="myusername" type="email" class="form-control"  value="" required />
+                <span>Password (6 or more characters): </span><br />
+                <input name="mypassword" id="mypassword" type="password" class="form-control"  value="" required /><br />
+
+                <input class="btn btn-lg btn-primary btn-block" type="submit" value="Join Now" />
+
+            </form>
+        </div>
+        <script>
+            smoothScroll.init();
+        </script>
+    </body>
+</html>

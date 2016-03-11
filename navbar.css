@@ -1,0 +1,14 @@
+﻿		.nav navbar-nav {
+        padding: 0px;
+        }
+        .nav li {
+        display: inline;
+        padding: 0px 10px 0px 10px;
+        }
+        .nav a {
+        color: #FFFF00;	
+        }
+		.active {
+		background-color: #FFFF00;
+		}
+		

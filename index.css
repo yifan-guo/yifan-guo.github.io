@@ -1,0 +1,60 @@
+﻿
+        header {
+        background-image: url("Main.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        text-align: center;
+        color: white;
+        }
+        h1 {
+        font-size: 80px;
+        }
+        img {
+        padding: 20px;
+        }
+        article {
+        max-width: 800px;
+        padding: 20px;
+        margin: 0 auto;
+        }
+        .sponsors {
+        background: white;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-attachment: fixed;
+        }
+        button {
+        color: black;
+        text-align: center;
+        }
+        @media (max-width: 500px) {
+            h1 {
+            font-size: 36px;
+            }
+            li {
+				display: inline;
+                padding: 10px;
+            }
+        }
+        embed {
+        margin: 0 auto;
+        }
+        .schedule {
+        text-align: center;
+        }
+        .footer {
+        text-align: right;
+        }
+        next {
+        right: 5px;
+        }
+        prev {
+        left: 500px;
+        }
+        .footer {
+        color: white;
+        text-align: left;
+        }
+
+		

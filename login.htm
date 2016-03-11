@@ -1,0 +1,43 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <title>Login</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial scale=1" />
+        <link href="normalize.css" rel="stylesheet" />
+        <script src="jquery-1.11.3.js"></script>
+
+        <!-- BootStrap -->
+        <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <!-- Smoothscroll -->
+        <script src="smooth-scroll.js"></script>
+
+        <!-- Custom CSS -->
+        <link href="login.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!--<script>
+            function redirect() {
+                window.history.back();
+            }
+        </script>-->
+        <div class="container">
+            <div class="text-center"><img src="Logo.jpg" style="height:200px; width: 200px; border-radious: 100%" /></div>
+            <h1 class="text-center">Login</h1>
+                <hr />
+            <form name="loginForm" action="http://localhost/checklogin.php" method="post" class="form-signin" role="form">
+                <input name="myusername" id="myusername" type="email" class="form-control" placeholder="Email Address" value="" required />
+                <input name="mypassword" id="mypassword" type="password" class="form-control" placeholder="Password" value="" required />
+                <input type="hidden" name="loginSubmit" id="loginSubmit" value="true" />
+                <input class="btn btn-lg btn-primary btn-block" type="submit" value="Login" />
+                <div class="text-center"><a href="http://localhost/forgotPassword.php">Forgot your password?</a></div><br />
+                <div class="text-center">Not a member? <a href="createaccount.htm">Sign Up!</a></div>
+            </form>
+        </div>
+        <script>
+            smoothScroll.init();
+        </script>
+    </body>
+</html>

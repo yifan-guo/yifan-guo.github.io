@@ -1,0 +1,162 @@
+<!--<?php
+    session_start();
+?>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Vandy_LAN Presents</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/normalize.css" rel="stylesheet" />
+    <script src="jquery-1.11.3.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Smooth Scroll -->
+    <script src="smooth-scroll.js"></script>
+
+    <!-- Custom CSS -->
+        <link href="navbar.css" rel="stylesheet" />
+        <link href="index.css" rel="stylesheet" />
+
+    <!-- Custom JS -->
+    <!--<script src="check_login.js"></script>-->
+
+    
+</head>
+
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+           <ul class="nav navbar-nav">
+            <!--<li><img src="Logo.jpg" style="border-radius: 50%; height: 60px; width: 60px">&nbsp;Vandy_LAN</li>-->
+            <li><a class="active" href="index.htm">Home</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">Register<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="Register.htm">Pick a Tournament</a></li>
+                    <li><a href="https://docs.google.com/forms/d/1G6QaijU56woFdjEDRJbs1lCf6QuzrqRJQAQTZSYjn1I/viewform" target="_blank">Volunteer</a></li>
+                    <li><a href="https://docs.google.com/forms/d/1e4DIYPghofnaa1pNcdJa45hW0RWJDUEUcKtednPor9o/viewform" target="_blank">Lend Consoles</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">Info<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="logistics.htm">Logistics</a></li>
+                    <li><a href="FAQ.htm">FAQ's</a></li>
+                    <li><a href="about.htm">About Us</a></li>
+                </ul>            
+            </li>
+
+                <li><a href="https://www.facebook.com/events/760506580745655/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="http://vanderbilt.edu" target="_blank"><i class="fa fa-globe"></i></a></li>
+                <li><a href="mailto:vandylanboard@gmail.com? Subject=Question%20for%20Vandy_LAN"><i class="fa fa-envelope"></i></a></li>
+
+        </ul>
+       </nav>
+        <br /><br /><br /><br /><br />
+
+        <!-- Logo -->
+        <img style="
+            margin: 40px 0px 0px 0px; 
+            border-radius: 100%; 
+            width: 200px; 
+            height: 200px"
+            src="Logo.jpg" />
+
+
+        <h1>Vandy_LAN</h1>
+
+    </header>
+
+    <!-- About Us -->
+    <article>
+        <a id="aboutUs"></a>
+        <h2 class="text-center">About Us</h2><hr />
+        <p>VandyLAN is a student organization dedicated to hosting gaming events and tournaments for members of the Vanderbilt community while generating a positive impact on the Greater Nashville community.  VandyLAN hosts multiple hangouts across the semester as well as the largest gaming event on campus.</p>
+        <div class="text-center" style="margin-top: 40px"><button type="button" class="btn btn-primary" style="margin: 0 auto" onclick="parent.location='about.htm'">Meet the Board</button></div>
+    </article>
+
+    <!-- Our Event -->
+    <article>
+        <h2 class="text-center">Our Event</h2><hr />
+        <h4 class="text-center">Saturday, March 19 at 2PM <br />Featheringill Hall</h4>
+        <p>Vanderbilt's premiere gaming event returns for the Spring 2016 semester! Doors open at 2pm, but food and drinks (and games) will be provided throughout the day. Play your favorite games, or just hang out in Featheringill for free food and a chance to win prizes!<br /><br />FREE FOOD, DRINKS, & PRIZES!<br />We will be giving away a PLAYSTATION 4 (Black OPS III Limited Edition Bundle). More prizes to be announced soon!<br /><br /> For a full list of tournaments, check out the link <a href="Register.htm">here</a>.<br />Tournament winners will also receive PRIZES, check the tournament registration tab for more details.<br /><br />There will also be free-play games for gamers who want to play in a non-competitive setting, including DDR, Guitar Hero, Dance Central, and more in the lobby. In addition, Vanderbilt Gamecraft and Vanderbilt Tabletop will be holding events. Details will be added soon. <br /><br />Event is free for Vanderbilt students and alumni. Entry fee for non-Vanderbilt Students is $10. <br />Come out to Featheringill Hall Saturday, March 19th for a night of gaming and good times! See you there!</p>
+    </article>
+
+
+    <!-- Timeline of Tournaments -->
+    <h2 class="text-center">Tournament Schedule</h2><hr />
+    <div class="text-center">
+        <iframe src='http://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1Skkx6UI2Wi8mMSnpOjaaFsVAOHghyKGq_DmtI7Mgz2g&font=Default&maptype=toner&lang=en&initial_zoom=2&height=350' width='80%' frameborder='0' height='350'></iframe>
+    </div>
+
+
+    <!-- Sponsors -->
+    <a id="sponsors"></a>
+    <footer class="sponsors" style="text-align: center">
+        <h2 class="sponsors-text">Sponsors</h2><hr />
+
+        <a href="http://it.vanderbilt.edu/"
+            target="_blank"
+            title="Mouseover Description">
+            <img style="width: 200px; height: 118px;"
+                src="it.png"
+                alt="VUIT" /></a>
+
+        <a href="http://studentorgs.vanderbilt.edu/vpb/"
+            target="_blank"
+            title="Mouseover Description">
+            <img style="width: 200px; height: 132px;"
+                src="venue.png"
+                alt="Venue" /></a>
+
+        <a href="http://commons.vanderbilt.edu/"
+            target="_blank"
+            title="Mouseover Description">
+            <img style="width: 200px; height: 121px;"
+                src="commons.png"
+                alt="Vanderbilt Commons" /></a>
+
+        <a href="http://www.gamestop.com/"
+            target="_blank"
+            title="Mouseover Description">
+            <img style="width: 200px; height: 122px;"
+                src="gamestop.png"
+                alt="Gamestop" /></a>
+
+        <a href="http://www.vanderbilt.edu/curbcenter/"
+            target="_blank"
+            title="Mouseover Description">
+            <img style="width: 200px; height: 181px;"
+                src="curb.png"
+                alt="Curb Center" /></a>
+
+        <a href="http://na.leagueoflegends.com/"
+            target="_blank"
+            title="Mouseover Description">
+            <img style="width: 200px; height: 154px;"
+                src="lol.png"
+                alt="League of Legends" /></a><br />
+
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 2015<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Vandy_LAN.
+        </div>
+    </footer>
+
+    <!-- Initialize Smooth Scroll -->
+    <script>
+        smoothScroll.init();
+    </script>
+
+</body>
+</html>

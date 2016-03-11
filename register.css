@@ -1,0 +1,46 @@
+﻿        body {
+            text-align: center;
+            background: url("IntenseGame.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        h1 {
+        color: white;
+        text-align: center;
+        font-size: 50px;
+        padding: 50px;
+        }
+        div {
+            position: relative;
+        }
+        span {
+        position: absolute;
+        bottom: 100;
+        color: white;
+        }
+        .align-right span {
+            right: 100px;
+        }
+        .align-left span {
+            left: 100px;
+        }
+        @media (max-width: 500px) {
+            h1 {
+             font-size: 36px;
+            }
+        }
+        .show-description img {
+        opacity: 0.6;
+        }
+        .show-description span {
+        opacity: 1;
+        }
+        pre {
+        color: white;
+        background: black;
+        display: none;
+        }
+        .show-up {
+        display: block;
+        }
