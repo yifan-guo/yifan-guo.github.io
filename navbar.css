@@ -1,10 +1,20 @@
-﻿		.nav navbar-nav {
-        padding: 0px;
+﻿		nav ul {
+		list-style-type: none;
+		white-space: nowrap;
         }
-        .nav li {
-        display: inline;
+        nav ul li {
+        display: inline-block;
         padding: 0px 10px 0px 10px;
         }
+		nav ul li a {
+		padding: 14px 16px;
+		}
+		nav ul li a:hover{
+		background-color: #111;
+		}
+		.dropdown-menu li {
+		display: block;
+		}
         .nav a {
         color: #FFFF00;	
         }
